@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="DiscViewer.Views.FlyoputView.PlayList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DiscViewer.Views.FlyoputView"
+             mc:Ignorable="d" Background="White" HorizontalAlignment="Right" VerticalAlignment="Stretch"
+             d:DesignHeight="450" Width="200" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="播放列表" Margin="20,10,0,0" HorizontalAlignment="Left" FontWeight="Bold"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Grid Width="30" Height="40" MouseDown="Grid_MouseDown" VerticalAlignment="Top" Background="Transparent" Margin="0,0,20,0">
+                <TextBlock Text="X" Margin="0,10,0,0"/>
+            </Grid>
+        </StackPanel>
+        <ScrollViewer Name="SC" Grid.Row="1">
+            <StackPanel Name="MyGrid" VerticalAlignment="Top" >
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
