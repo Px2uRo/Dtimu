@@ -4,7 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DiscViewer.Views" 
+               xmlns:sc="clr-namespace:DiscViewer.SmallControls"
              mc:Ignorable="d" MouseMove="UserControl_MouseMove" 
+             d:Height="450" d:Width="800"
              Margin="0,0,0,60">
     <Grid>
         <ScrollViewer VerticalScrollBarVisibility="Hidden" 
@@ -22,7 +24,16 @@
             <TextBlock Foreground="White" FontSize="20" Canvas.Top="-30" Canvas.Left="120" FontWeight="Bold" Name="TitleBox" />
             <TextBlock Foreground="White" FontSize="16" Canvas.Top="-5" Canvas.Left="120" Name="PerformancerBox" />
         </Canvas>
-        <StackPanel Orientation="Horizontal" Margin="10">
+        <sc:MyFunctionButton MouseDown="SearchBtn_MouseDown" KeyDown="SearchBtn_KeyDown"
+                                     ButtonBackground="White"
+                    Icon="/Images/Search.png" IconColor="Black"
+                    x:Name="SearchBtn" HorizontalAlignment="Right"
+                    ButtonText="搜索" Margin="0,10,10,0"
+                    ToolTip="搜索歌曲"/>
+        <TextBox Name="SearchBox" Height="20" VerticalAlignment="Top"
+                 d:Width="680" Visibility="Hidden" d:Visibility="Visible"
+                 HorizontalAlignment="Right" Margin="0,12,10,0"/>
+        <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
             <Grid Background="Transparent" 
                   Name="PlayAll"
                   MouseDown="PlayAll_MouseDown">
@@ -30,6 +41,8 @@
                     <Image Source="..\Images\PageBack.png"/>
                 </Button>
             </Grid>
+            <StackPanel Margin="5">
+            </StackPanel>
         </StackPanel>
 
     </Grid>

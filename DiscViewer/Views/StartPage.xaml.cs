@@ -76,5 +76,17 @@ namespace DiscViewer.Views
             var mw = App.Current.MainWindow as MainWindow;
             mw.mainBorder.Child = PictrueWrap.UI;
         }
+
+        private void ReIndexBtn_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void OptionBorder_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+            var mw = App.Current.MainWindow as MainWindow;
+            mw.mainBorder.Child = SettingPage.UI;
+        }
     }
 }
