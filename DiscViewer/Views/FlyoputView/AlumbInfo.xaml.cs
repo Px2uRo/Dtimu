@@ -39,7 +39,14 @@ namespace DiscViewer.Views.FlyoputView
                 Opacity = 0.5               // 设置阴影透明度
             };
             this.Effect = shadowEffect;
+            PlayingBar.Current.HiddenPropChanged += Current_HiddenPropChanged;
         }
+
+        private void Current_HiddenPropChanged(object sender, EventArgs e)
+        {
+
+        }
+
         internal void LoadAlumb(Album album,string name,BitmapImage bi)
         {
             _album = album;
@@ -102,17 +109,24 @@ namespace DiscViewer.Views.FlyoputView
 
         internal void Show()
         {
+            (App.Current as App).EscapeBahavior += AlumbInfo_EscapeBahavior; 
             this.Visibility = Visibility.Visible;
-
-            if (!PlayingBar.Current.Stopped)
+            if (!PlayingBar.Current.Hidden)
             {
                 this.BeginAnimation(MarginProperty, MarginAnim(this.DesiredSize.Height,50));
             }
             else
             {
                 this.BeginAnimation(MarginProperty, MarginAnim(this.DesiredSize.Height,0));
+                
             }
         }
+
+        private void AlumbInfo_EscapeBahavior(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         static ThicknessAnimation MarginAnim(double height,double finalH) => new ThicknessAnimation()
         {
             From = new Thickness(30, 0, 30, 0-height),

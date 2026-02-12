@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+
+    .card-chrome {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 160px; /* 初始高度，后面JS会调整 */
+        background-color: #D6D9E8;
+    }
+
+    .card-title {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-weight: 900;
+    }
+</style>
+
+<body>
+     <div class="bg-light p-3">
+        <h1 style="height:20px"></h1>
+        <h1 style="font-weight:bold;font-size:48px">Dtimu - Disc ToolkIt for MUltimedia</h1>
+        <h6 id="host-text"></h6>
+        
+    </div>
+
+    <vc:video-card></vc:video-card>
+    <vc:music-card></vc:music-card>
+
+</body>

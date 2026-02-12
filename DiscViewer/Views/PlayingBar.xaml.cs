@@ -42,7 +42,20 @@ namespace DiscViewer.Views
         public static PlayingBar Current { get; set; }
         public bool Stopped { get => _isStopped; }
         public CompetedAction ca { get; set; } = CompetedAction.RepeatList;
+        public bool _hidden = false;
+        public bool Hidden
+        {
+            get => _hidden;
+            set
+            {
+                _hidden = value;
+                Current.HiddenPropChanged?.Invoke(Current, new());
+            }
+        }
 
+        public bool EnableAnimAndEvent { get; private set; } = true;
+
+        public event EventHandler<EventArgs> HiddenPropChanged;
         private Thumb FindThumb(FrameworkElement slider)
         {
             // 遍历视觉树以查找Thumb控件
@@ -76,6 +89,25 @@ namespace DiscViewer.Views
             MarginAnim.Completed += MarginAnim_Completed;
             MarginAnim2.Completed += MarginAnim2_Completed;
             VideoViewer.UI.media.MediaEnded += _media1_MediaEnded;
+            AlumbInfo.Current.IsVisibleChanged += Current_IsVisibleChanged;
+        }
+
+        private void Current_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if(sender as AlumbInfo is AlumbInfo alumb)
+            {
+                if(App.Current.MainWindow is MainWindow window)
+                {
+                    if (alumb.IsVisible)
+                    {
+                        this.EnableAnimAndEvent = false;
+                    }
+                    else
+                    {
+                        this.EnableAnimAndEvent = true;
+                    }
+                }
+            }
         }
 
         private void _media1_MediaEnded(object sender, RoutedEventArgs e)
@@ -435,7 +467,11 @@ namespace DiscViewer.Views
                 {
                     Current.Visibility = Visibility.Visible;
                     //Current.MouseLeave -= UserControl_MouseLeave;
-                    Current.BeginAnimation(MarginProperty, MarginAnim);
+                    if (Current.EnableAnimAndEvent)
+                    {
+                        Current.Hidden = false;
+                        Current.BeginAnimation(MarginProperty, MarginAnim);
+                    }
                 }));
                 _notResponsing = false;
             }).Start();
@@ -752,11 +788,14 @@ namespace DiscViewer.Views
 
         internal static void Hide()
         {
-        //    Current.MouseLeave -= UserControl_MouseLeave;
             if (Current.Margin.Bottom == 0)
             {
-                Current.BeginAnimation(MarginProperty, MarginAnim2);
-                Current.BeginAnimation(VisibilityProperty, BooledAnim());
+                if (Current.EnableAnimAndEvent)
+                {
+                    Current.Hidden = true;
+                    Current.BeginAnimation(MarginProperty, MarginAnim2);
+                    Current.BeginAnimation(VisibilityProperty, BooledAnim());
+                }
             }
         }
 

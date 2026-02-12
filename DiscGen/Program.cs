@@ -14,7 +14,9 @@ namespace IndexGen
         static void Main(string[] args)
         {
 #if DEBUG
-            var d = "I:\\TempSteam";
+            string d = "";
+            //d = "I:\\TempSteam";
+            d = "J:\\Hanime\\春羽しか";
             args = new string[] { d };
 #endif
             var dire = args[0];
@@ -29,7 +31,7 @@ namespace IndexGen
                 DireInfoUtil.ReNameToSha256(dire);
                 ////DireInfoUtil.OrderPicturesByTime(dire);
                 DireInfoUtil.BuildIndex(dire);
-                DireInfoUtil.GenSimpleDiscInfo(dire, $"创意工坊节选({i})");
+                DireInfoUtil.GenSimpleDiscInfo(dire, $"Hanime - 春羽しか");
                 ///DireInfoUtil.GenInfo(dire, "迷宫河&sprt;2024 年 01 月 31 日游玩迷宫河视频");
                 //DireInfoUtil.GenPictrue(dire,123,255);
 

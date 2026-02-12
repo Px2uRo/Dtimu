@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "File View";
+    if(Model is FileViewModel fvmodel)
+    {
+        var dire = new System.IO.DirectoryInfo(fvmodel.Path);
+        <a href="/files">根目录</a>
+        if (System.IO.Path.GetDirectoryName(fvmodel.Path).Contains(Program.RootPath))
+        {
+            var pp = "/files"+fvmodel.ParentP.Replace(System.IO.Path.PathSeparator,'/');
+            <a href=@pp >上一级</a>
+        }
+        <ul>
+        
+            @{foreach (var item in dire.GetDirectories())
+            {
+                    <li>
+                        <a href="@($"/files{item.FullName.Replace(Program.RootPath, "").Replace(System.IO.Path.PathSeparator, '/')}")">@item.Name</a>
+                    </li>
+            }
+        }
+
+        </ul>
+        <ul>
+
+            @{
+                foreach (var item in dire.GetFiles())
+                {
+                    <li>
+                        <a href="@($"/files{item.FullName.Replace(Program.RootPath, "").Replace(System.IO.Path.PathSeparator, '/')}")">@item.Name</a>
+                    </li>
+                }
+    
+        }
+
+        </ul>
+    }
+}

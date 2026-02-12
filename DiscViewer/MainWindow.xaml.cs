@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static DiscViewer.Views.PlayingBar;
 
 namespace DiscViewer
 {
@@ -24,6 +26,30 @@ namespace DiscViewer
         {
             InitializeComponent();
             PlayingBar.Current.Played += Current_Played;
+            PlayingBar.Current.HiddenPropChanged += Current_HiddenPropChanged;
+        }
+
+        private void Current_HiddenPropChanged(object sender, EventArgs e)
+        {
+            var bar = sender as PlayingBar;
+            if (bar.Hidden)
+            {
+                new Thread(() => {
+                    Thread.Sleep(300);
+                    Dispatcher.Invoke(new MyAction(() =>
+                    {
+                        if (bar.Hidden)
+                        {
+                            BottonGrid.Height = 15;
+                        }
+                    }));
+                }).Start();
+
+            }
+            else
+            {
+                BottonGrid.Height = double.NaN;
+            }
         }
 
         private void Current_Played(object sender, RoutedEventArgs e)

@@ -29,7 +29,6 @@ namespace DiscViewer
 #elif !DEBUG
             var ar1 = e.Args[0]; TargetDire = ar1;
 #endif
-
             var ip = System.IO.Path.Combine(App.TargetDire, "index.json");
             if (System.IO.File.Exists(ip))
             {
@@ -116,10 +115,16 @@ namespace DiscViewer
                     }
                 }
             }
+            else if (e.Key == Key.Escape)
+            {
+                EscapeBahavior.Invoke(EscapeSender, e);
+            }
         }
 
         public static ObservableCollection<string> PlayingList { get; set; } = new ObservableCollection<string>();
         public static DireInfo DireInfo { get; internal set; }
         public static string TargetDire { get; internal set; }
+        public object EscapeSender { get; set; }
+        public event EventHandler<EventArgs> EscapeBahavior;
     }
 }
