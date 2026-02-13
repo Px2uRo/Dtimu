@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Dtimu.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dtimu"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:ConnectionId='1' x:Name="RootGrid" HorizontalAlignment="Stretch">
+        <!-- 右侧导航 Frame -->
+        <Frame x:ConnectionId='2' x:Name="ContentFrame" HorizontalAlignment="Stretch"                                   >
+            <Frame.ContentTransitions>
+                <TransitionCollection>
+                    <NavigationThemeTransition  />
+                </TransitionCollection>
+            </Frame.ContentTransitions>
+
+        </Frame>
+    </Grid>
+</Page>
+

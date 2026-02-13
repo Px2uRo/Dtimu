@@ -1,0 +1,14 @@
+App.xbf
+Controls\RecentItem.xbf
+Controls\RecentItemPanel.xbf
+Controls\ServerEntrance.xbf
+Controls\ServerEntrancePanel.xbf
+Styles\MyRecentItemResourceDictionary.xbf
+Views\HomePage.xbf
+Views\MainPage.xbf
+Views\MusicListView.xbf
+Views\MusicPage.xbf
+Views\PicturePage.xbf
+Views\ServerNavigatePage.xbf
+Views\SettingsPage.xbf
+Views\VideoPage.xbf
