@@ -32,6 +32,11 @@ namespace Dtimu.Views
             this.InitializeComponent();
             
             RIP.RecentItems = GlobalConfigs.RecentItems;
+
+            GlobalConfigs.ServerInstances = new ObservableCollection<ServerInstance>();
+
+            Utils.RemoteUtil.StartFindServers();
+
             SEP.ServerInstances = GlobalConfigs.ServerInstances;
 
             

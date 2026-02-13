@@ -80,13 +80,12 @@ namespace Dtimu.Utils
                 ? 0
                 : uint.MaxValue << (32 - prefixLength);
         }
-        public static async Task StartFindServers()
+        public static void StartFindServers()
         {
             var hostnames = Windows.Networking.Connectivity.NetworkInformation.GetHostNames();
             var res = new List<IPEndPoint>();
             foreach (var item in hostnames)
             {
-                await Task.Delay(2000);
                 if (item.IPInformation != null)
                 {
                     if(item.Type == HostNameType.Ipv6)

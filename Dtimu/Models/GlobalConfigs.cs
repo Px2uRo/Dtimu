@@ -20,7 +20,6 @@ namespace Dtimu.Models
         public static ObservableCollection<RecentItemPair> RecentItems { get; set; }
         public static void Initialize()
         {
-            ServerInstances = new ObservableCollection<ServerInstance>();
             RecentItems = new ObservableCollection<RecentItemPair>();
 
             ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
@@ -40,7 +39,7 @@ namespace Dtimu.Models
             }
             RecentItems.CollectionChanged += RecentItems_CollectionChanged;
 
-            Utils.RemoteUtil.StartFindServers();
+            
         }
 
         private static void RecentItems_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
