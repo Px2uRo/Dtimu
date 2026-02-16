@@ -41,7 +41,7 @@ namespace Dtimu.Utils
                 while (true)
                 {
                     var receiveTask = udp.ReceiveAsync();
-                    var timeoutTask = Task.Delay(2000);
+                    var timeoutTask = Task.Delay(5000);
 
                     var completed = await Task.WhenAny(receiveTask, timeoutTask);
 

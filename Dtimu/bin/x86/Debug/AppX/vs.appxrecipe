@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-02-13T04:07:16.604</Modified>
+      <Modified>2026-02-16T01:43:32.236</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Dtimu.exe">
       <PackagePath>entrypoint\Dtimu.exe</PackagePath>
-      <Modified>2026-02-13T04:07:16.343</Modified>
+      <Modified>2026-02-16T01:43:31.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -534,11 +534,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Dtimu.xr.xml">
       <PackagePath>Dtimu.xr.xml</PackagePath>
-      <Modified>2026-02-13T03:03:16.230</Modified>
+      <Modified>2026-02-16T01:40:19.958</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
       <Modified>2026-02-02T00:49:22.137</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Controls\Marquee.xbf">
+      <PackagePath>Controls\Marquee.xbf</PackagePath>
+      <Modified>2026-02-16T01:39:06.422</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Controls\RecentItem.xbf">
       <PackagePath>Controls\RecentItem.xbf</PackagePath>
@@ -554,15 +558,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Controls\ServerEntrancePanel.xbf">
       <PackagePath>Controls\ServerEntrancePanel.xbf</PackagePath>
-      <Modified>2026-02-13T02:52:20.773</Modified>
+      <Modified>2026-02-16T01:39:06.422</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Styles\MyRecentItemResourceDictionary.xbf">
       <PackagePath>Styles\MyRecentItemResourceDictionary.xbf</PackagePath>
-      <Modified>2026-02-13T04:07:16.238</Modified>
+      <Modified>2026-02-16T01:43:31.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Views\HomePage.xbf">
       <PackagePath>Views\HomePage.xbf</PackagePath>
-      <Modified>2026-02-13T03:09:43.502</Modified>
+      <Modified>2026-02-16T01:39:06.422</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
@@ -570,11 +574,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Views\MusicListView.xbf">
       <PackagePath>Views\MusicListView.xbf</PackagePath>
-      <Modified>2026-02-02T00:49:22.137</Modified>
+      <Modified>2026-02-16T01:39:06.422</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Views\MusicPage.xbf">
       <PackagePath>Views\MusicPage.xbf</PackagePath>
-      <Modified>2026-02-02T00:49:22.138</Modified>
+      <Modified>2026-02-16T01:40:19.964</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Views\PicturePage.xbf">
       <PackagePath>Views\PicturePage.xbf</PackagePath>
@@ -582,11 +586,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Views\ServerNavigatePage.xbf">
       <PackagePath>Views\ServerNavigatePage.xbf</PackagePath>
-      <Modified>2026-02-02T00:49:22.138</Modified>
+      <Modified>2026-02-16T01:39:06.423</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Views\SettingsPage.xbf">
       <PackagePath>Views\SettingsPage.xbf</PackagePath>
-      <Modified>2026-02-12T03:07:33.052</Modified>
+      <Modified>2026-02-16T01:39:06.423</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Views\VideoPage.xbf">
       <PackagePath>Views\VideoPage.xbf</PackagePath>
@@ -598,11 +602,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-02-13T03:55:23.460</Modified>
+      <Modified>2026-02-16T01:39:06.969</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\User\source\repos\Dtimu\Dtimu\bin\x86\Debug\Core\Dtimu.exe">
       <PackagePath>Dtimu.exe</PackagePath>
-      <Modified>2026-02-13T04:07:16.599</Modified>
+      <Modified>2026-02-16T01:43:32.231</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

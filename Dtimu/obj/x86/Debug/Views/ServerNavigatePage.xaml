@@ -7,14 +7,110 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Grid>
-        <ListBox x:ConnectionId='1' x:Name="MenuList" HorizontalAlignment="Stretch"
-                 SelectionMode="Single"
-                                                             >
-            <ListBoxItem Content="视频" Tag="Video"/>
-            <ListBoxItem Content="音乐" Tag="Music"/>
-            <ListBoxItem Content="图片" Tag="Pictures"/>
-        </ListBox>
-    </Grid>
+    <ScrollViewer>
+        <StackPanel>
+            <TextBlock Text="HOSTNAME" FontSize="24" Margin="20,3,0,0" />
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" Width="320" Height="320">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.33*"/>
+                    <ColumnDefinition Width="1.33*"/>
+                    <ColumnDefinition Width="1.33*"/> 
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.33*"/>
+                    <RowDefinition Height="1.33*"/>
+                    <RowDefinition Height="1.33*"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button x:ConnectionId='1'                      VerticalAlignment="Stretch" Padding="0" BorderBrush="Black" HorizontalAlignment="Stretch" Grid.RowSpan="3" Grid.ColumnSpan="3">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Background="#052956">
+                            <Image x:ConnectionId='10' Name="Img1">
+
+                            </Image>
+                        </Border>
+                        <Border Background="#07458D" Grid.Column="1">
+                            <Image x:ConnectionId='9' Name="Img2">
+
+                            </Image>
+                        </Border>
+                        <Border Background="#0950AA" Grid.Column="2">
+                            <Image x:ConnectionId='8' Name="Img3">
+
+                            </Image>
+                        </Border>
+                        <Border Background="#0950AA" Grid.Row="1">
+                            <Image x:ConnectionId='7' Name="Img4">
+
+                            </Image>
+                        </Border>
+                        <Border Background="#0B61CE" Grid.Row="1" Grid.Column="1">
+                            <Image x:ConnectionId='6' Name="Img5">
+
+                            </Image>
+                        </Border>
+                        <Border Background="#0C6BE3" Grid.Row="1" Grid.Column="2">
+                            <Image x:ConnectionId='5' Name="Img6">
+
+                            </Image>
+                        </Border>
+                        <Border Background="#2278E6" Grid.Row="2">
+                            <Image x:ConnectionId='4' Name="Img7">
+
+                            </Image>
+                        </Border>
+                        <Border Background="#0C6BE3" Grid.Row="2" Grid.Column="1">
+                            <Image x:ConnectionId='3' Name="Img8">
+
+                            </Image>
+                        </Border>
+                        <Border Background="#0c6be3" Grid.Row="2" Grid.Column="2">
+                            <Image x:ConnectionId='2' Name="Img9">
+
+                            </Image>
+                        </Border>
+                    </Grid>
+                </Button>
+
+                <Button BorderThickness="0" Background="Transparent" Padding="0"
+                        Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                    <Border Background="#173A73" Height="75" Width="75">
+
+                    </Border>
+                </Button>
+
+                <Button BorderThickness="0" Background="Transparent" Padding="0"
+                        Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="2" Margin="0,5,0,0"
+                        Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Border Background="HotPink" Width="120" Height="120">
+
+                    </Border>
+                </Button>
+                <Button BorderThickness="0" Background="Transparent" Padding="0"
+                        Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4"
+                        Grid.RowSpan="3" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <Border Background="Green" Width="120" Height="120">
+                        
+                    </Border>
+                </Button>
+            </Grid>
+
+        </StackPanel>
+    </ScrollViewer>
 </Page>
 

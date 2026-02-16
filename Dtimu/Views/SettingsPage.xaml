@@ -10,11 +10,9 @@
     <!--<Button Content="ClickMe!" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"/>-->
     <StackPanel>
         <StackPanel>
-            <TextBlock Text="局域网设备" FontSize="24" Margin="10">
-
-            </TextBlock>
+            <TextBlock Text="手动设备" FontSize="24" Margin="10"/>
         </StackPanel>
-        <ListBox>
+        <ListBox Name="RecordedDevices" SelectionChanged="RecordedDevices_SelectionChanged">
             
         </ListBox>
         <Grid Height="32" Name="Grd">

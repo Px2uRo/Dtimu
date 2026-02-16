@@ -9,8 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <ScrollViewer>
         <Grid>
-            <StackPanel>
-                <StackPanel>
+            <StackPanel Name="BigSP">
+                <StackPanel Name="RecentItemsSP">
                     <TextBlock Text=" 最近的项目 " FontSize="24" Margin="10">
 
                     </TextBlock>

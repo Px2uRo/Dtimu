@@ -30,13 +30,14 @@ namespace Dtimu.Views
         public HomePage()
         {
             this.InitializeComponent();
-            
+
+            if (GlobalConfigs.RecentItems.Count == 0)
+            {
+                BigSP.Children.Remove(RecentItemsSP);
+            }
             RIP.RecentItems = GlobalConfigs.RecentItems;
-
             GlobalConfigs.ServerInstances = new ObservableCollection<ServerInstance>();
-
             Utils.RemoteUtil.StartFindServers();
-
             SEP.ServerInstances = GlobalConfigs.ServerInstances;
 
             

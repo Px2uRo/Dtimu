@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dtimu.Models;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
@@ -104,10 +105,19 @@ namespace Dtimu.Utils
                     var bc = ipp.GetBroadcast();
 
                     var discovery = new BroadCastDiscover(bc, 0);
+#pragma warning disable CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
                     discovery.DiscoverAsync();
-
+#pragma warning restore CS4014 // 由于此调用不会等待，因此在调用完成前将继续执行当前方法
                 }
             }
+            foreach (var item in GlobalConfigs.RecordedDevices)
+            {
+                var ins = new ServerInstance();
+                ins.IPAddress = item;
+                ins.HostName = item;
+                GlobalConfigs.ServerInstances.Add(ins);
+            }
+
         }
     }
 }

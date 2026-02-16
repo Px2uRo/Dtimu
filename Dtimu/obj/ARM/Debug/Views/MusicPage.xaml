@@ -36,15 +36,17 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         <StackPanel x:ConnectionId='5' VerticalAlignment="Center" Width="350" x:Name="MusicInfo_Area">
-            <Image x:ConnectionId='6' x:Name="AlumbCover" Width="300" Height="300"/>
-            <TextBlock Text="Title" FontSize="28" FontWeight="Bold" Margin="0,30,0,0"/>
-            <TextBlock Text="Author"/>
-            <Slider x:ConnectionId='7' Name="SeekController"/>
-            
-            <MediaElement x:ConnectionId='8' x:Name="mediaPlayer" 
+            <Grid Width="300" Height="300">
+                <Image x:ConnectionId='7' x:Name="AlumbCover" />
+                <MediaElement x:ConnectionId='8' x:Name="mediaPlayer" 
                           AreTransportControlsEnabled="False">
 
-            </MediaElement>
+                </MediaElement>
+            </Grid>
+            <TextBlock Text="Title" FontSize="28" FontWeight="Bold" Margin="0,30,0,0"/>
+            <TextBlock Text="Author"/>
+            <Slider x:ConnectionId='6' Name="SeekController"/>
+            
 
         </StackPanel>
         

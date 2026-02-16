@@ -103,6 +103,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BindingConvertors\PerformancerConvertor.cs" />
+    <Compile Include="Controls\Marquee.xaml.cs">
+      <DependentUpon>Marquee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\RecentItem.xaml.cs">
       <DependentUpon>RecentItem.xaml</DependentUpon>
     </Compile>
@@ -115,11 +119,14 @@
     <Compile Include="Controls\ServerEntrancePanel.xaml.cs">
       <DependentUpon>ServerEntrancePanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Console.cs" />
+    <Compile Include="Models\DireInfoModels.cs" />
     <Compile Include="Models\RecentItemPair.cs" />
     <Compile Include="Models\GlobalConfigs.cs" />
     <Compile Include="Models\ServerInstance.cs" />
     <Compile Include="Utils\BroadCastDiscover.cs" />
     <Compile Include="Utils\IPUtil.cs" />
+    <Compile Include="ViewModels\NavigateViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -168,6 +175,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\Marquee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\RecentItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

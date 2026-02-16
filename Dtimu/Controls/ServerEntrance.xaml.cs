@@ -1,4 +1,5 @@
-﻿using Dtimu.Views;
+﻿using Dtimu.Models;
+using Dtimu.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -56,7 +57,9 @@ namespace Dtimu.Controls
             }
             else
             {
-
+                var instance = DataContext as Models.ServerInstance;
+                instance.RefreshList();
+                GlobalConfigs.CurrentServerInstance = instance;
             }
             np = typeof(ServerNavigatePage);
 
